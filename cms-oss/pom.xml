@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.ruoyi.cms</groupId>
+    <artifactId>ruoyi-cms</artifactId>
+    <version>3.4</version>
+  </parent>
+  <artifactId>cms-oss</artifactId>
+  <name>cms-oss</name>
+  <url>http://maven.apache.org</url>
+    <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <coobird.thumbnailator>0.4.8</coobird.thumbnailator>
+    <upyun.sdk.version>4.0.1</upyun.sdk.version>
+	<aliyun.sdk.version>2.8.3</aliyun.sdk.version>
+	<qiniu.sdk.version>7.2.18</qiniu.sdk.version>
+  </properties>
+  <dependencies>
+  <!--web-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+        
+        <dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+        
+        <!--常用工具类 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+    
+    <dependency>
+			<groupId>net.coobird</groupId>
+			<artifactId>thumbnailator</artifactId>
+			<version>${coobird.thumbnailator}</version>
+		</dependency>
+    <!-- 又拍云SDK -->
+		<dependency>
+			<groupId>com.upyun</groupId>
+			<artifactId>java-sdk</artifactId>
+			<version>${upyun.sdk.version}</version>
+		</dependency>
+
+		<!-- 阿里云SDK-->
+		<dependency>
+			<groupId>com.aliyun.oss</groupId>
+			<artifactId>aliyun-sdk-oss</artifactId>
+			<version>${aliyun.sdk.version}</version>
+		</dependency>
+
+		<!-- 七牛云SDK-->
+		<dependency>
+			<groupId>com.qiniu</groupId>
+			<artifactId>qiniu-java-sdk</artifactId>
+			<version>${qiniu.sdk.version}</version>
+		</dependency>
+		
+	 <!-- 获取文件类型 -->
+        <dependency>
+            <groupId>org.apache.tika</groupId>
+            <artifactId>tika-core</artifactId>
+            <version>1.20</version>
+        </dependency>
+	
+ 
+  </dependencies>
+  
+  <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
